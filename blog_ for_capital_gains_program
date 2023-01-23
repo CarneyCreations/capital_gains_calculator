@@ -1,0 +1,35 @@
+                                Blog for writing the Capital Gains Tax program
+
+- Download the APIs from each exchange, potentially in the .csv format.
+
+
+- Format the dates of each trade so that they are ready for comparison operators.       yyyy/mm/dd hh/mm/ss
+
+
+- </> If necessary, use a separate .py file to rearrange the columns so that each .csv file is consistent across each
+  exchange. <\>
+
+        - It is much easier and faster to manipulate the .csv files inside Excel manually.
+
+
+- Initially I intended on moving coins from the .csv files into a new list relative to the coin, i.e. ETH = []. Then I
+  was going to .pop() the trade from the .csv file to save space.
+
+        - I decided against this due to the trades potentially getting erased and not being submitted in the final
+        reports so instead, I wrote everything to separate files. This also acts as a backup which is useful for
+        visualising the data.
+
+            - Each coin has it's own text file which I can then read from later on. I am writing each coin to it's own
+              file provided it is calculable (GBP). Otherwise it is being written to another file where I will have to
+              calculate the fair market value before adding to it's named file.
+
+
+- If the buy/sell trades are on the same day and coins_bought > coins_sold:
+
+            - Move the trades to a new .txt file <coin_name>_day_trade.
+
+             [There may be a manual aspect to calculating spare coins from trades...scratch that.]
+
+                    - I could calculate (coins_bought[2] - coins_sold[1.3]) = 0.7 and reassign the coins_bought
+                      quantity with 0.7. This remainder could then be passed into the next category (B&B, rule 104),
+                      and the information for calculating the cost basis would still be retained.
