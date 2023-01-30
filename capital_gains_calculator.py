@@ -18,7 +18,7 @@ csv_data = []
 
 # encoding="ISO-8859-1" prevents the csv error:
 # UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
-# binance_csv = open("/Users/josh/Git/capital_gains_calculator/Binance/2020-2021 Tax Year (complete) (SPLIT PAIRS).csv",
+# binance_csv = open("/Users/josh/Git/capital_gains_calculator/binance/2020_2021_binance_split_pairs(complete).csv",
 #                    "r", encoding="ISO-8859-1")
 binance_csv = open("test_csv.csv",
                    "r", encoding="ISO-8859-1")
